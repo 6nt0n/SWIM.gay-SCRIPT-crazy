@@ -1300,7 +1300,7 @@ lonesurvival:AddToggle('silenw22', {
 })
 
 lonesurvival:AddDropdown('SilentAimHitPartjb', {
-    Values = {'CHEST', 'HEAD'},
+    Values = {'Humanoidrootpart', 'Head'},
     Default = 1,
     Multi = false,
 
