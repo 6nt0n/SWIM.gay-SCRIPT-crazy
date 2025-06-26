@@ -26,8 +26,8 @@ local Window = Library:CreateWindow({
     TabPadding = 8
 })
 local Tabs = {
-    Main = Window:AddTab('Aimbot - Esp'),
-    Misc = Window:AddTab('Hacks'),
+    Main = Window:AddTab('Aim - Visuals'),
+    Misc = Window:AddTab('Player'),
     Lua = Window:AddTab('Useless'),
     Settings = Window:AddTab('Settings'),
 }
@@ -200,7 +200,7 @@ EnemyEspTab:AddToggle('EspSwitch', {
     end
 })
 EnemyEspTab:AddToggle('boxswitch', {
-    Text = 'BOX',
+    Text = 'B#X',
     Default = false,  
     Callback = function(first)
         enemysets.box = first
@@ -215,7 +215,7 @@ EnemyEspTab:AddToggle('boxswitch', {
     end
 })
 EnemyEspTab:AddToggle('nameswitch', {
-    Text = 'NAME',
+    Text = 'N#ME',
     Default = false,  
     
 
@@ -232,7 +232,7 @@ EnemyEspTab:AddToggle('nameswitch', {
     end
 })
 EnemyEspTab:AddToggle('healthswitch', {
-    Text = 'HEALTH BAR',
+    Text = 'HE#LTH BAR',
     Default = false,  
     
 
@@ -241,7 +241,7 @@ EnemyEspTab:AddToggle('healthswitch', {
     end
 })
 EnemyEspTab:AddToggle('healthswitch', {
-    Text = 'HEALTH TEXT',
+    Text = 'HE#LTH TEXT',
     Default = false,  
     
 
@@ -258,7 +258,7 @@ EnemyEspTab:AddToggle('healthswitch', {
     end
 })
 EnemyEspTab:AddToggle('tracerswitch', {
-    Text = 'TRACERS',
+    Text = 'TR#CERS',
     Default = false,  
     Callback = function(first)
         enemysets.tracer = first
@@ -276,7 +276,7 @@ EnemyEspTab:AddDropdown('Enemy Tracer Origin', {Values = {'Top', 'Bottom', 'Mous
     enemysets.tracerOrigin = Value
 end})
 EnemyEspTab:AddToggle('distswitch', {
-    Text = 'DISTANCE',
+    Text = 'DIST#`NCE',
     Default = false,  
 
     Callback = function(first)
@@ -292,7 +292,7 @@ EnemyEspTab:AddToggle('distswitch', {
     end
 })
 EnemyEspTab:AddToggle('distswitchniger', {
-    Text = 'CHAMS',
+    Text = 'CH#MS',
     Default = false,  
 
     Callback = function(first)
@@ -300,7 +300,7 @@ EnemyEspTab:AddToggle('distswitchniger', {
     end
 }):AddColorPicker('distcolor1337', {
     Default = Color3.new(1, 1, 1),
-    Title = 'CHAMS OUTLINE',
+    Title = 'CH#MS OUTLINE',
     Transparency = 0,
 
     Callback = function(Value)
@@ -308,7 +308,7 @@ EnemyEspTab:AddToggle('distswitchniger', {
     end
 }):AddColorPicker('distcolor228', {
     Default = Color3.new(1, 1, 1),
-    Title = 'CHAMS FILL',
+    Title = 'CH#MS FILL',
     Transparency = 0,
 
     Callback = function(Value)
@@ -317,14 +317,14 @@ EnemyEspTab:AddToggle('distswitchniger', {
 })
 
 EnemyEspTab:AddToggle('outOfViewArrows/switch', { --//outOfViewArrows for EnemySets
-    Text = 'PLAYER ARROWS',
+    Text = 'PL#YER ARROWS',
     Default = false,  
     Callback = function(first)
         enemysets.offScreenArrow = first 
     end
 }):AddColorPicker('outOfViewArrowscolor', {
     Default = Color3.new(1, 1, 1),
-    Title = 'PLAYER ARROWS',
+    Title = 'PL#YER ARROWS',
     Transparency = 0,
 
     Callback = function(Value)
@@ -371,7 +371,7 @@ TeamEspTab:AddToggle('teamboxswitch', {
     end
 })
 TeamEspTab:AddToggle('teamnameswitch', {
-    Text = 'NAME',
+    Text = 'N#ME',
     Default = false,  
     
 
@@ -388,7 +388,7 @@ TeamEspTab:AddToggle('teamnameswitch', {
     end
 })
 TeamEspTab:AddToggle('teamhealthswitch', {
-    Text = 'HEALTH BAR',
+    Text = 'HE#LTH BAR',
     Default = false,  
     
 
@@ -397,7 +397,7 @@ TeamEspTab:AddToggle('teamhealthswitch', {
     end
 })
 TeamEspTab:AddToggle('teamhealthswitch', {
-    Text = 'HEALTH TEXT',
+    Text = 'HE#LTH TEXT',
     Default = false,  
     
 
@@ -414,7 +414,7 @@ TeamEspTab:AddToggle('teamhealthswitch', {
     end
 })
 TeamEspTab:AddToggle('teamdistswitch', {
-    Text = 'DISTANCE',
+    Text = 'DIST#NCE',
     Default = false,  
 
     Callback = function(first)
@@ -1403,7 +1403,7 @@ lonesurvival:AddDivider()
 do
     local enable = false
     local speed = 5
-    lonesurvival:AddToggle('flight', {Text = 'FLYHACK',Default = false,Callback = function(first)
+    lonesurvival:AddToggle('FLIGHT', {Text = 'FLY',Default = false,Callback = function(first)
         enable = first
     end}):AddKeyPicker('flight_key', {Default = 'nil',SyncToggleState = true,Mode = 'Toggle',Text = 'flight',NoUI = false,Callback = function(Value)end})
     lonesurvival:AddSlider('flightspeed', {Text = 'flight speed', Default = 5,Min = 0.1,Max = 10,Rounding = 1,Compact = true}):OnChanged(function(first)
