@@ -338,11 +338,11 @@ EnemyEspTab:AddToggle('outOfViewArrows/switch', { --//outOfViewArrows for EnemyS
         enemysets.offScreenArrow = first 
     end
 })
-EnemyEspTab:AddSlider('outOfViewArrowsOutlines radius', {Text = 'oof radius', Default = 60,Min = 0,Max = 600,Rounding = 0,Compact = true})
+EnemyEspTab:AddSlider('outOfViewArrowsOutlines radius', {Text = 'ARROWS RADIUS', Default = 60,Min = 0,Max = 600,Rounding = 0,Compact = true})
 :OnChanged(function(State)
     enemysets.offScreenArrowRadius = State
 end)
-EnemyEspTab:AddSlider('outOfViewArrowsOutlines Size', {Text = 'oof size', Default = 60,Min = 0,Max = 600,Rounding = 0,Compact = true})
+EnemyEspTab:AddSlider('outOfViewArrowsOutlines Size', {Text = 'ARROWS SIZE', Default = 60,Min = 0,Max = 600,Rounding = 0,Compact = true})
 :OnChanged(function(State)
     enemysets.offScreenArrowSize = State
 end)
@@ -434,7 +434,7 @@ end
 local WorldTab = Visuals:AddTab('WORLD')
 local Misc = Tabs.Misc:AddLeftGroupbox('MISC')
 local CrosshairTab = Tabs.Misc:AddLeftGroupbox('CROSSHAIR')
-local movetab = Tabs.Misc:AddRightGroupbox('MOVEMENT HACKS')
+local movetab = Tabs.Misc:AddRightGroupbox('MOVEMENT')
 local stuffz = Tabs.Settings:AddLeftGroupbox('MENU')
 local luatab = Tabs.Lua:AddRightGroupbox('idk how this works bruh');
 (function()
@@ -1154,7 +1154,7 @@ Misc:AddButton('REJOIN', function()
 end)
 
 movetab:AddToggle('ToggleSpeed', {
-    Text = 'SPEEDHACK',
+    Text = 'SPEED',
     Default = false,  
     
 
@@ -1405,7 +1405,7 @@ do
     local speed = 5
     lonesurvival:AddToggle('FLIGHT', {Text = 'FLY',Default = false,Callback = function(first)
         enable = first
-    end}):AddKeyPicker('flight_key', {Default = 'nil',SyncToggleState = true,Mode = 'Toggle',Text = 'flight',NoUI = false,Callback = function(Value)end})
+    end}):AddKeyPicker('flight_key', {Default = 'nil',SyncToggleState = true,Mode = 'Toggle',Text = 'FLIGHT',NoUI = false,Callback = function(Value)end})
     lonesurvival:AddSlider('flightspeed', {Text = 'flight speed', Default = 5,Min = 0.1,Max = 10,Rounding = 1,Compact = true}):OnChanged(function(first)
         speed = first
     end)
