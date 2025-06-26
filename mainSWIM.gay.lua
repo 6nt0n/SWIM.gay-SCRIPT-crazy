@@ -1351,14 +1351,6 @@ lonesurvival:AddToggle('fov11outline', {
     end
 })
 
-lonesurvival:AddToggle('wallnigger', {
-    Text = 'WALLBANG',
-    Default = false,
-    Callback = function(first)
-        lsurv.wallnigger = first
-    end
-})
-
 lonesurvival:AddDivider()
 
 lonesurvival:AddSlider('baseclipdist', {
